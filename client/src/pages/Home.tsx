@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Zap, BookOpen, Sparkles } from "lucide-react";
 import { examCategories } from "@/lib/examData";
+import ExamSearch from "@/components/ExamSearch";
 
 export default function Home() {
   return (
@@ -10,18 +11,34 @@ export default function Home() {
       {/* Header */}
       <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="container py-4 flex items-center justify-between">
+          <Link href="/">
+            <div className="flex items-center gap-2 cursor-pointer">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-teal-500 flex items-center justify-center text-white font-bold">
+                📚
+              </div>
+              <div>
+                <h1 className="font-bold text-lg">Exam AI Prompt</h1>
+                <p className="text-xs text-slate-500">80+ Indian Competitive Exams</p>
+              </div>
+            </div>
+          </Link>
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-teal-500 flex items-center justify-center text-white font-bold">
-              📚
-            </div>
-            <div>
-              <h1 className="font-bold text-lg">Exam AI Prompt</h1>
-              <p className="text-xs text-slate-500">80+ Indian Competitive Exams</p>
-            </div>
+            <Link href="/faq">
+              <Button variant="ghost" size="sm">
+                FAQ
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button variant="ghost" size="sm">
+                Contact
+              </Button>
+            </Link>
+            <a href="https://github.com/raghavendra-exp/bankexamv2" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="sm">
+                GitHub
+              </Button>
+            </a>
           </div>
-          <Button variant="outline" size="sm">
-            GitHub
-          </Button>
         </div>
       </header>
 
@@ -43,9 +60,11 @@ export default function Home() {
               Get Started
               <ArrowRight className="w-4 h-4" />
             </Button>
-            <Button size="lg" variant="outline">
-              Learn More
-            </Button>
+            <Link href="/faq">
+              <Button size="lg" variant="outline">
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
 
@@ -66,6 +85,13 @@ export default function Home() {
             <h3 className="font-semibold">AI Ready</h3>
             <p className="text-sm text-slate-600">Works with Claude, ChatGPT, Gemini</p>
           </Card>
+        </div>
+      </section>
+
+      {/* Search Section */}
+      <section className="container py-8">
+        <div className="max-w-md mx-auto">
+          <ExamSearch />
         </div>
       </section>
 
@@ -118,33 +144,33 @@ export default function Home() {
             <div>
               <h4 className="font-bold text-white mb-4">Exams</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white">UPSC</a></li>
-                <li><a href="#" className="hover:text-white">Banking</a></li>
-                <li><a href="#" className="hover:text-white">SSC</a></li>
-                <li><a href="#" className="hover:text-white">Railway</a></li>
+                <li><Link href="/exam/banking" className="hover:text-white">Banking</Link></li>
+                <li><Link href="/exam/upsc" className="hover:text-white">UPSC</Link></li>
+                <li><Link href="/exam/ssc" className="hover:text-white">SSC</Link></li>
+                <li><Link href="/exam/railway" className="hover:text-white">Railway</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold text-white mb-4">Resources</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white">Blog</a></li>
-                <li><a href="#" className="hover:text-white">FAQ</a></li>
-                <li><a href="#" className="hover:text-white">Contact</a></li>
+                <li><Link href="/faq" className="hover:text-white">FAQ</Link></li>
+                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+                <li><a href="https://github.com/raghavendra-exp/bankexamv2" target="_blank" rel="noopener noreferrer" className="hover:text-white">GitHub</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold text-white mb-4">Legal</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white">Privacy</a></li>
+                <li><Link href="/privacy" className="hover:text-white">Privacy</Link></li>
                 <li><a href="#" className="hover:text-white">Terms</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold text-white mb-4">Follow</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white">Twitter</a></li>
-                <li><a href="#" className="hover:text-white">Instagram</a></li>
-                <li><a href="#" className="hover:text-white">YouTube</a></li>
+                <li><a href="https://www.facebook.com/Raghavbegins" target="_blank" rel="noopener noreferrer" className="hover:text-white">Facebook</a></li>
+                <li><a href="https://www.instagram.com/raghav3o" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a></li>
+                <li><a href="https://www.youtube.com/@raghav_begins" target="_blank" rel="noopener noreferrer" className="hover:text-white">YouTube</a></li>
               </ul>
             </div>
           </div>
