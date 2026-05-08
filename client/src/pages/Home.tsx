@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { ArrowRight, Zap, BookOpen, Sparkles } from "lucide-react";
 import { examCategories } from "@/lib/examData";
 import ExamSearch from "@/components/ExamSearch";
+import FeatureShowcase from "@/components/FeatureShowcase";
+import OnboardingGuide from "@/components/OnboardingGuide";
 
 export default function Home() {
   return (
@@ -101,6 +103,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Feature Showcase */}
+      <FeatureShowcase />
+
       {/* Exam Categories */}
       <section className="container py-20 space-y-8">
         <div className="space-y-2">
@@ -135,6 +140,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Onboarding Guide */}
+      <OnboardingGuide />
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-20 relative overflow-hidden">

@@ -10,6 +10,7 @@ import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import MusicPlayer from "./components/MusicPlayer";
+import InteractiveTutorial from "./components/InteractiveTutorial";
 
 
 function Router() {
@@ -43,6 +44,7 @@ function App() {
           <Toaster />
           <Router />
           <MusicPlayer />
+          <InteractiveTutorial />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
